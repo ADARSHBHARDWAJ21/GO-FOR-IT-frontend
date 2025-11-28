@@ -38,7 +38,6 @@ const router = createBrowserRouter([
       { index: true, element: <Index /> },
       { path: 'sign-in/*', element: <SignIn /> },
       { path: 'sign-up/*', element: <SignUp /> },
-      // Keep old routes for backward compatibility
       { path: 'login', element: <SignIn /> },
       { path: 'signup', element: <SignUp /> },
       
