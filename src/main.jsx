@@ -4,7 +4,7 @@ import { ClerkProvider } from '@clerk/clerk-react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import Index from './pages/Index.jsx';
-import SignIn from './pages/Signin.jsx';
+import SignIn from './pages/SignIn.jsx';
 import SignUp from './pages/Signup.jsx';
 import DashLayout from './pages/DashLayout.jsx';
 import NotFound from './pages/NotFound.jsx';
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Index /> },
       { path: 'sign-in/*', element: <SignIn /> },
-      { path: 'sign-up/*', element: <SignUp /> },
+      { path: 'sign-up/*', element: <Signup /> },
       { path: 'login', element: <SignIn /> },
       { path: 'signup', element: <SignUp /> },
       
