@@ -14,6 +14,7 @@ const Header = () => {
         </Link>
         
         <nav className="hidden md:flex items-center ml-20 space-x-2">
+        
           <Button variant="ghost" size="sm" asChild>
             <a href="#locations">Destinations</a>
           </Button>

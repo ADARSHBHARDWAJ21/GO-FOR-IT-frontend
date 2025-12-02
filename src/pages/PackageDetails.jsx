@@ -32,7 +32,11 @@ const PackageDetails = () => {
             ...religiousPackages.map(p => ({...p})),
             ...adventurePackages.map(p => ({...p})),
         ];
-        const found = all.find(p => String(p.id) === id || slugify(p.title) === id || slugify(p.name) === id);
+        const found = all.find(p => {
+            const titleSlug = p.title ? slugify(p.title) : '';
+            const nameSlug = p.name ? slugify(p.name) : '';
+            return String(p.id) === id || titleSlug === id || nameSlug === id;
+        });
         if (found) setPack({
             name: found.title,
             description: found.description,

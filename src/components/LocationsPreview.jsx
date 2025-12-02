@@ -4,21 +4,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { MapPin, Star, Send } from "lucide-react";
-import keralaBBackwaters from "@/assets/kerala-backwaters.jpg";
+//import keralaBBackwaters from "@/assets/kerala-backwaters.jpg";
 import rajasthanDesert from "@/assets/rajasthan-desert.jpg";
 import himachalMountains from "@/assets/himachal-mountains.jpg";
 import goaBeach from "@/assets/goa-beach.jpg";
+import keralaBackwaters from "@/assets/kerala-backwaters.jpg";
 
 // Updated locations array with unique IDs for routing
 const locations = [
-  {
-    id: "kerala-backwaters", // Unique ID for the route
-    name: "Kerala Backwaters",
-    location: "Alleppey, Kerala",
-    rating: 4.8,
-    image: keralaBBackwaters,
-    price: "₹15,999",
-  },
   {
     id: "rajasthan-desert-safari",
     name: "Rajasthan Desert Safari",
@@ -28,20 +21,28 @@ const locations = [
     price: "₹12,499",
   },
   {
-    id: "himachal-mountain-retreat",
-    name: "Mountain Retreat",
-    location: "Manali, Himachal Pradesh",
-    rating: 4.9,
-    image: himachalMountains,
-    price: "₹18,999",
-  },
-  {
     id: "goa-beach-paradise",
     name: "Beach Paradise",
     location: "Goa",
     rating: 4.6,
     image: goaBeach,
     price: "₹9,999",
+  },
+  {
+    id: "kerala-backwaters",
+    name: "Kerala Backwaters",
+    location: "Alleppey, Kerala",
+    rating: 4.8,
+    image: keralaBackwaters,
+    price: "₹15,999",
+  },
+  {
+    id: "himachal-mountain-retreat",
+    name: "Himachal Mountain Retreat",
+    location: "Manali, Himachal Pradesh",
+    rating: 4.9,
+    image: himachalMountains,
+    price: "₹18,999",
   },
 ];
 

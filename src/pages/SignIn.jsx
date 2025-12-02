@@ -39,7 +39,7 @@ const SignIn = () => {
           routing="path" 
           path="/sign-in"
           signUpUrl="/sign-up"
-          afterSignInUrl="/dashboard"
+          afterSignInUrl="../components/HeroSection"
           appearance={{
             // Use the dark theme base from Clerk
             variables: {

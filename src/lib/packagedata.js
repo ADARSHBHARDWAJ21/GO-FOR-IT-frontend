@@ -39,6 +39,28 @@ export const packageData = [
       "duration": "8 Days / 7 Nights",
       "description": "Discover the royal heritage of Rajasthan with a desert safari in Jaisalmer, a visit to the palaces of Jaipur, and the lakes of Udaipur.",
       "rating": 4.6
+    },
+    {
+      "id": 5,
+      "image": "/src/assets/kerala-backwaters.jpg",
+      "title": "Kerala Backwaters",
+      "name": "Kerala Backwaters",
+      "location": "Alleppey, Kerala",
+      "price": "₹15,999",
+      "duration": "6 Days / 5 Nights",
+      "description": "Experience the serene backwaters of Kerala in a traditional houseboat. Cruise through peaceful canals, visit spice plantations, and enjoy authentic Kerala cuisine.",
+      "rating": 4.8
+    },
+    {
+      "id": 6,
+      "image": "/src/assets/himachal-mountains.jpg",
+      "title": "Himachal Mountain Retreat",
+      "name": "Himachal Mountain Retreat",
+      "location": "Manali, Himachal Pradesh",
+      "price": "₹18,999",
+      "duration": "7 Days / 6 Nights",
+      "description": "Escape to the majestic mountains of Himachal Pradesh. Enjoy breathtaking views, adventure activities, and peaceful mountain retreats in Manali and surrounding areas.",
+      "rating": 4.9
     }
   ]
 
