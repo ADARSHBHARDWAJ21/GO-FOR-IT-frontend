@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://go-for-it-backend-1-9rqz.onrender.com/api';
 
 class ItineraryService {
     async generateItinerary(tripDetails) {
@@ -79,3 +79,4 @@ class ItineraryService {
 }
 
 export default new ItineraryService();
+
