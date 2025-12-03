@@ -634,9 +634,29 @@ const TripPlannerSection = () => {
             }
         } catch (error) {
             console.error('Error generating AI itinerary:', error);
+            
+            // Extract a user-friendly error message
+            let errorMessage = error.message || "There was an error generating your itinerary. Please try again.";
+            
+            // If error message contains newlines or is too long, extract the first meaningful part
+            if (errorMessage.includes('\n')) {
+                const lines = errorMessage.split('\n');
+                // Find the first line that's not empty and not a numbered instruction
+                errorMessage = lines.find(line => 
+                    line.trim() && 
+                    !line.trim().match(/^\d+\./) && 
+                    !line.trim().startsWith('Please:')
+                ) || lines[0] || errorMessage;
+            }
+            
+            // Truncate very long messages
+            if (errorMessage.length > 200) {
+                errorMessage = errorMessage.substring(0, 200) + '...';
+            }
+            
             toast({
                 title: "Error Generating Itinerary",
-                description: error.message || "There was an error generating your itinerary. Please try again.",
+                description: errorMessage,
                 variant: "destructive",
             });
         }
@@ -790,9 +810,28 @@ const TripPlannerSection = () => {
             
         } catch (error) {
             console.error('Error generating itinerary after login:', error);
+            
+            // Extract a user-friendly error message
+            let errorMessage = error.message || "There was an error generating your itinerary. Please try again.";
+            
+            // If error message contains newlines or is too long, extract the first meaningful part
+            if (errorMessage.includes('\n')) {
+                const lines = errorMessage.split('\n');
+                errorMessage = lines.find(line => 
+                    line.trim() && 
+                    !line.trim().match(/^\d+\./) && 
+                    !line.trim().startsWith('Please:')
+                ) || lines[0] || errorMessage;
+            }
+            
+            // Truncate very long messages
+            if (errorMessage.length > 200) {
+                errorMessage = errorMessage.substring(0, 200) + '...';
+            }
+            
             toast({
                 title: "Error Generating Itinerary",
-                description: error.message || "There was an error generating your itinerary. Please try again.",
+                description: errorMessage,
                 variant: "destructive",
             });
         }
@@ -833,9 +872,28 @@ const TripPlannerSection = () => {
             
         } catch (error) {
             console.error('Error regenerating itinerary:', error);
+            
+            // Extract a user-friendly error message
+            let errorMessage = error.message || "There was an error updating your itinerary. Please try again.";
+            
+            // If error message contains newlines or is too long, extract the first meaningful part
+            if (errorMessage.includes('\n')) {
+                const lines = errorMessage.split('\n');
+                errorMessage = lines.find(line => 
+                    line.trim() && 
+                    !line.trim().match(/^\d+\./) && 
+                    !line.trim().startsWith('Please:')
+                ) || lines[0] || errorMessage;
+            }
+            
+            // Truncate very long messages
+            if (errorMessage.length > 200) {
+                errorMessage = errorMessage.substring(0, 200) + '...';
+            }
+            
             toast({
                 title: "Error Updating Itinerary",
-                description: error.message || "There was an error updating your itinerary. Please try again.",
+                description: errorMessage,
                 variant: "destructive",
             });
         }
