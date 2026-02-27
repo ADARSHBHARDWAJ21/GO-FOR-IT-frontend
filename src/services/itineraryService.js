@@ -1,10 +1,10 @@
-const API_BASE_URL = ' https://go-for-it-backend-2-vbtp.onrender.com';
+const API_BASE_URL = 'http://localhost:5000/api';
 
 class ItineraryService {
     async generateItinerary(tripDetails) {
         try {
             const response = await fetch(`${API_BASE_URL}/itinerary/generate`, {
-                method: 'POST',
+               method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
